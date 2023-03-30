@@ -8,6 +8,7 @@ const Url = "https://rickandmortyapi.com/api/";
 export const RMContextProvider = ({children}) => {
     const [characters, setCharacters] = useState([])
     const [locations, setLocations] = useState([])
+    const [episodes, setEpisodes] = useState([])
 
     useEffect(()=>{
         const getCharacters = async () => {
@@ -23,9 +24,16 @@ export const RMContextProvider = ({children}) => {
         }
         getLocations()
     },[])
+    useEffect(()=>{
+        const getEpisodes = async () => {
+            const chaptersApi = await axios.get(`${Url}episode`)
+            setEpisodes(chaptersApi.data.results)
+        }
+        getEpisodes()
+    },[])
 
     return(
-        <RMcontext.Provider value ={{characters, locations}}>
+        <RMcontext.Provider value ={{characters, locations, episodes}}>
             {children}
         </RMcontext.Provider>
     )
