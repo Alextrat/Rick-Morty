@@ -1,0 +1,22 @@
+
+
+.HomePage{
+
+}
+.center{
+    font-family: Impact;
+    font-size: 600%; 
+    position: absolute; 
+    top: 70%; 
+    left: 50%; 
+    margin: -250px 0 0 -450px
+}
+.navbar{
+    position: absolute;
+    top: 70%;
+    font-family:monospace;
+    font-weight: 900;
+    width: 100%;
+    font-size: 60px;
+    background: transparent;  
+}

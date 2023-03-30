@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  background-image: url("https://images3.alphacoders.com/812/812062.png");
+  background-attachment: fixed;
+  background-size: 100% 100%;   
 }
 
 .App-logo {
